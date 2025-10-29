@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log*
+uploads
+.env
+*.webm
+.DS_Store
+.git
+.gitignore
+package-lock.json
