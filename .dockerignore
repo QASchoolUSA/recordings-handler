@@ -6,4 +6,4 @@ uploads
 .DS_Store
 .git
 .gitignore
-package-lock.json
+# Keep lockfile for reproducible Docker builds
