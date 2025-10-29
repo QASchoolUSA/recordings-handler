@@ -8,7 +8,8 @@ WORKDIR /app
 
 # Install dependencies first (better layer caching)
 COPY package*.json ./
-RUN npm ci --omit=dev
+# Use lockfile for reproducible builds if present, otherwise install
+RUN if [ -f package-lock.json ]; then npm ci --omit=dev; else npm install --omit=dev; fi
 
 # Copy source
 COPY . .
